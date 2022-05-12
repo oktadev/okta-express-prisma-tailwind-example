@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model WorkoutLog {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  exercise  String
+  amount    Decimal
+  units     String
+  date      DateTime
+  minutes   Int
+  calories  Int
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model User {
+  id          Int          @id @default(autoincrement())
+  username    String       @unique @db.VarChar(255)
+  workoutLogs WorkoutLog[]
+}

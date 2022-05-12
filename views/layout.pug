@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/output.css')
+  body
+    nav.flex.items-center.justify-between.flex-wrap.bg-teal-500.p-6.flex.items-center.flex-shrink-0.text-white.mr-6
+      span.font-semibold.text-xl.tracking-tight.pr-2 The Workout Tracker
+      .w-full.block.flex-grow(class='lg:flex lg:items-center lg:w-auto')
+        .text-sm(class='lg:flex-grow')
+        div
+          if(isAuthenticated)
+            form(action="logout" method="POST") 
+              button(type="submit").inline-block.text-sm.px-4.py-2.leading-none.border.rounded.text-white.border-white.mt-4(href='#' class='hover:border-transparent hover:text-teal-500 hover:bg-white lg:mt-0') Logout
+          else 
+            a.inline-block.text-sm.px-4.py-2.leading-none.border.rounded.text-white.border-white.mt-4(href='Login' class='hover:border-transparent hover:text-teal-500 hover:bg-white lg:mt-0') Login
+    
+    block content
