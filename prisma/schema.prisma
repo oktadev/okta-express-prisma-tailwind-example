@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlserver"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -21,6 +21,6 @@ model WorkoutLog {
 
 model User {
   id          Int          @id @default(autoincrement())
-  username    String       @unique @db.VarChar(255)
+  username    String       @unique
   workoutLogs WorkoutLog[]
 }
