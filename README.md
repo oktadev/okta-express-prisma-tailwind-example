@@ -1,6 +1,6 @@
 # Okta Express Prisma Tailwind Example
 
-This repository shows you how to use Okta on an express web application using Prisma as an ORM. Please read [Build a website with Express.Js and Prisma][blog] to see how it was created.
+This repository shows you how to use Okta on an express web application using Prisma as an ORM. Please read [How to Build an Express Application using Prisma][blog] to see how it was created.
 
 **Prerequisites:**
 
