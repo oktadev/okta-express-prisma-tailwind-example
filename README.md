@@ -1,27 +1,22 @@
-# Build a website with Express.Js and Prisma
+# Okta Express Prisma Tailwind Example
 
-This repository shows you how to use Okta on an express web application using Prisma as an ORM.. Please read [Build a website with Express.Js and Prisma][blog] to see how it was created.
+This repository shows you how to use Okta on an express web application using Prisma as an ORM. Please read [Build a website with Express.Js and Prisma][blog] to see how it was created.
 
 **Prerequisites:**
 
 - [Node](https://nodejs.org/en/download/)
-- [Eleventy](https://www.11ty.dev/)
 - [Okta CLI](https://cli.okta.com)
 
 > [Okta](https://developer.okta.com/) has Authentication and User Management APIs that reduce development time with instant-on, scalable user infrastructure. Okta's intuitive API and expert support make it easy for developers to authenticate, manage and secure users and roles in any application.
-
-* [Getting Started](#getting-started)
-* [Links](#links)
-* [Help](#help)
-* [License](#license)
 
 ## Getting Started
 
 To run this example, run the following commands:
 
 ```bash
-git clone https://github.com/nickolasfisher/Okta_Primsa
-cd workout-app
+git clone https://github.com/oktadev/okta-express-prisma-tailwind-example.git
+cd okta-express-prisma-tailwind-example
+npm i
 ```
 
 ### Create an OIDC Application in Okta
@@ -52,7 +47,7 @@ export OKTA_OAUTH2_CLIENT_SECRET="{yourClientSecret}"
 export OKTA_OAUTH2_CLIENT_ID="{yourClientId}"
 ```
 
-Create a file called `.env` in the `workout-app` directory.  Add the following code and replace the values with yours.
+Create a file called `.env` in the `okta-express-prisma-tailwind-example` directory.  Add the following code and replace the values with yours.
 
 ```bash
 # Environment variables declared in this file are automatically made available to Prisma.
@@ -61,7 +56,7 @@ Create a file called `.env` in the `workout-app` directory.  Add the following c
 # Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server, MongoDB and CockroachDB (Preview).
 # See the documentation for all the connection string options: https://pris.ly/d/connection-strings
 
-DATABASE_URL="{yourDatabaseUrl}"
+DATABASE_URL="file:./dev.db"
 SEED_USER_NAME="{yourOktaUserName}"
 ```
 
