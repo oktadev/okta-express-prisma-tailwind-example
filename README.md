@@ -65,6 +65,22 @@ DATABASE_URL="{yourDatabaseUrl}"
 SEED_USER_NAME="{yourOktaUserName}"
 ```
 
+## Run the database migration
+
+First install the dependencies using the following command
+
+```bash
+npm install prisma
+```
+
+This should install [the prisma CLI](https://www.prisma.io/docs/concepts/components/prisma-cli/installation) along with anything else.
+
+Now you should be able to run the command to migrate your database.
+
+```bash
+npx prisma migrate dev --name init
+```
+
 ## Start the Application.
 
 Run the command `npm run start` and then open `https://localhost:3000` in your favorite browser and you should be able to see the home page.
