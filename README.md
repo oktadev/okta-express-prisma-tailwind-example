@@ -60,20 +60,12 @@ DATABASE_URL="file:./dev.db"
 SEED_USER_NAME="{yourOktaUserName}"
 ```
 
-## Run the database migration
+## Run the database migration and seed script
 
-First install the dependencies using the following command
-
-```bash
-npm install prisma
-```
-
-This should install [the prisma CLI](https://www.prisma.io/docs/concepts/components/prisma-cli/installation) along with anything else.
-
-Now you should be able to run the command to migrate your database.
+Execute the following command to run migrations for your database and generate the seed data.
 
 ```bash
-npx prisma migrate dev --name init
+npx prisma migrate reset
 ```
 
 ## Start the Application.
