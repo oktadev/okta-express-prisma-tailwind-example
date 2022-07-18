@@ -60,6 +60,14 @@ DATABASE_URL="file:./dev.db"
 SEED_USER_NAME="{yourOktaUserName}"
 ```
 
+## Run the database migration and seed script
+
+Execute the following command to run migrations for your database and generate the seed data.
+
+```bash
+npx prisma migrate reset
+```
+
 ## Start the Application.
 
 Run the command `npm run start` and then open `https://localhost:3000` in your favorite browser and you should be able to see the home page.
